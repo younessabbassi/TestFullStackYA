@@ -249,13 +249,13 @@
       <Project>{009d7666-6e83-48e4-9e37-c495e3c4a528}</Project>
       <Name>TestFullStack.YA.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TestFullStack.YA.Data\TestFullStack.YA.DataAPI.csproj">
+    <ProjectReference Include="..\TestFullStack.YA.Data\TestFullStack.YA.Data.csproj">
       <Project>{d17c86f6-a284-493b-8c87-d8ada9724e71}</Project>
-      <Name>TestFullStack.YA.DataAPI</Name>
+      <Name>TestFullStack.YA.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TestFullStack.YA.MiddleApi\TestFullStack.YA.MiddleApi.csproj">
+    <ProjectReference Include="..\TestFullStack.YA.MiddleApi\TestFullStack.YA.Middle.csproj">
       <Project>{41980f31-c223-4214-818a-4a7b0b113bc9}</Project>
-      <Name>TestFullStack.YA.MiddleApi</Name>
+      <Name>TestFullStack.YA.Middle</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

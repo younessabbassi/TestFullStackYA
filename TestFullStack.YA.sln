@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFullStack.YA.DataAPI", "TestFullStack.YA.Data\TestFullStack.YA.DataAPI.csproj", "{D17C86F6-A284-493B-8C87-D8ADA9724E71}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFullStack.YA.Data", "TestFullStack.YA.Data\TestFullStack.YA.Data.csproj", "{D17C86F6-A284-493B-8C87-D8ADA9724E71}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFullStack.YA.Core", "TestFullStack.YA.Core\TestFullStack.YA.Core.csproj", "{009D7666-6E83-48E4-9E37-C495E3C4A528}"
 EndProject
@@ -14,7 +14,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFullStack.YA.API", "Tes
 		{D17C86F6-A284-493B-8C87-D8ADA9724E71} = {D17C86F6-A284-493B-8C87-D8ADA9724E71}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFullStack.YA.MiddleApi", "TestFullStack.YA.MiddleApi\TestFullStack.YA.MiddleApi.csproj", "{41980F31-C223-4214-818A-4A7B0B113BC9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFullStack.YA.Middle", "TestFullStack.YA.MiddleApi\TestFullStack.YA.Middle.csproj", "{41980F31-C223-4214-818A-4A7B0B113BC9}"
 	ProjectSection(ProjectDependencies) = postProject
 		{009D7666-6E83-48E4-9E37-C495E3C4A528} = {009D7666-6E83-48E4-9E37-C495E3C4A528}
 		{D17C86F6-A284-493B-8C87-D8ADA9724E71} = {D17C86F6-A284-493B-8C87-D8ADA9724E71}

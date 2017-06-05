@@ -4,8 +4,8 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using TestFullStack.YA.MiddleApi;
 using TestFullStack.YA.Data;
-
 namespace TestFullStack.YA.Api.Controllers
 {
     public class UsersController : ApiController
@@ -28,7 +28,7 @@ namespace TestFullStack.YA.Api.Controllers
         }
 
         public Utilisateur get(string login,string password) {
-            
+            user
         }
         // POST: api/Users
         public void Post([FromBody]string value)

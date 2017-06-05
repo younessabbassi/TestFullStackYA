@@ -48,9 +48,9 @@
       <Project>{009d7666-6e83-48e4-9e37-c495e3c4a528}</Project>
       <Name>TestFullStack.YA.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TestFullStack.YA.Data\TestFullStack.YA.DataAPI.csproj">
+    <ProjectReference Include="..\TestFullStack.YA.Data\TestFullStack.YA.Data.csproj">
       <Project>{d17c86f6-a284-493b-8c87-d8ada9724e71}</Project>
-      <Name>TestFullStack.YA.DataAPI</Name>
+      <Name>TestFullStack.YA.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
