@@ -25,6 +25,6 @@ namespace TestFullStack.YA.Data
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<Utilisateur> Utilisateur { get; set; }
     }
 }

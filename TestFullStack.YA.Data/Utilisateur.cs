@@ -12,7 +12,7 @@ namespace TestFullStack.YA.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class Users
+    public partial class Utilisateur
     {
         public int id { get; set; }
         public string Name { get; set; }

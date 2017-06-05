@@ -4,34 +4,43 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using TestFullStack.YA.Data;
 
 namespace TestFullStack.YA.Api.Controllers
 {
-    public class ValuesController : ApiController
+    public class UsersController : ApiController
     {
-        // GET api/values
+        // GET: api/Users
         public IEnumerable<string> Get()
-        {
+        { 
             return new string[] { "value1", "value2" };
         }
 
-        // GET api/values/5
-        public string Get(int id)
+       
+        /// <summary>
+        /// get User By ID
+        /// </summary>
+        /// <param name=""></param>
+        /// <returns></returns>
+        public Utilisateur Get(int id)
         {
-            return "value";
+            return UsersAccess.get(id);
         }
 
-        // POST api/values
+        public Utilisateur get(string login,string password) {
+            
+        }
+        // POST: api/Users
         public void Post([FromBody]string value)
         {
         }
 
-        // PUT api/values/5
+        // PUT: api/Users/5
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE api/values/5
+        // DELETE: api/Users/5
         public void Delete(int id)
         {
         }

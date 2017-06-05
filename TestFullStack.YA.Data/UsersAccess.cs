@@ -8,15 +8,32 @@ namespace TestFullStack.YA.Data
 {
     public class UsersAccess
     {
+        private static  TestFullStackDBEntities DB = new TestFullStackDBEntities();
+        public static bool insert(Utilisateur user)
+        {
+            DB.Utilisateur.Add(user);
+            DB.SaveChanges();
+            return true;
+        }
+
         /// <summary>
         /// Get user by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public static Users get(int id)
+        public static Utilisateur get(int id)
+        { 
+            return DB.Utilisateur.Where(a => a.id == id).First();
+        }
+
+        /// <summary>
+        /// get user by login
+        /// </summary>
+        /// <param name="login"></param>
+        /// <returns></returns>
+        public static Utilisateur get(string login)
         {
-            TestFullStackDBEntities DB = new TestFullStackDBEntities();
-            return DB.Users.Where(a=> a.id==id).First();
+            return DB.Utilisateur.Where(a => a.login == login).First();
         }
 
         /// <summary>
@@ -25,10 +42,11 @@ namespace TestFullStack.YA.Data
         /// <param name="login"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        public static Users get(string login,string password)
-        {
-            TestFullStackDBEntities DB = new TestFullStackDBEntities();
-            return DB.Users.Where(a => a.login==login && a.password==password).First();
+        public static Utilisateur get(string login, string password)
+        { 
+            return DB.Utilisateur.Where(a => a.login == login && a.password == password).First();
         }
+
+        
     }
 }
