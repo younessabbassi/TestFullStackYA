@@ -1,4 +1,4 @@
-namespace TestFullStack.YA.Api.Areas.HelpPage
+namespace TestFullStack.YA.API.Areas.HelpPage
 {
     /// <summary>
     /// Indicates whether the sample is used for request or response

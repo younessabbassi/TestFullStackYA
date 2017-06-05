@@ -5,9 +5,9 @@ using System.Reflection;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
 using System.Xml.XPath;
-using TestFullStack.YA.Api.Areas.HelpPage.ModelDescriptions;
+using TestFullStack.YA.API.Areas.HelpPage.ModelDescriptions;
 
-namespace TestFullStack.YA.Api.Areas.HelpPage
+namespace TestFullStack.YA.API.Areas.HelpPage
 {
     /// <summary>
     /// A custom <see cref="IDocumentationProvider"/> that reads the API documentation from an XML documentation file.

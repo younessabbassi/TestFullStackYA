@@ -1,6 +1,6 @@
 using System;
 
-namespace TestFullStack.YA.Api.Areas.HelpPage
+namespace TestFullStack.YA.API.Areas.HelpPage
 {
     /// <summary>
     /// This represents an invalid sample on the help page. There's a display template named InvalidSample associated with this class.

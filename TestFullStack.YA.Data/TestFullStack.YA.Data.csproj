@@ -51,54 +51,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ModelTestFullStack.Context.cs">
+    <Compile Include="ModelDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelTestFullStack.Context.tt</DependentUpon>
+      <DependentUpon>ModelDB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelTestFullStack.cs">
+    <Compile Include="ModelDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelTestFullStack.tt</DependentUpon>
+      <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelTestFullStack.Designer.cs">
+    <Compile Include="ModelDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelTestFullStack.edmx</DependentUpon>
+      <DependentUpon>ModelDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsersAccess.cs" />
     <Compile Include="Utilisateur.cs">
-      <DependentUpon>ModelTestFullStack.tt</DependentUpon>
+      <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="ModelTestFullStack.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelTestFullStack.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.Config" />
-    <None Include="ModelTestFullStack.edmx.diagram">
-      <DependentUpon>ModelTestFullStack.edmx</DependentUpon>
+    <EntityDeploy Include="ModelDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelDB.edmx.diagram">
+      <DependentUpon>ModelDB.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ModelTestFullStack.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelTestFullStack.edmx</DependentUpon>
-      <LastGenOutput>ModelTestFullStack.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="ModelTestFullStack.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelTestFullStack.edmx</DependentUpon>
-      <LastGenOutput>ModelTestFullStack.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="ModelDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDB.edmx</DependentUpon>
+      <LastGenOutput>ModelDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDB.edmx</DependentUpon>
+      <LastGenOutput>ModelDB.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

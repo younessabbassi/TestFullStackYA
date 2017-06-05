@@ -6,7 +6,7 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 
-namespace TestFullStack.YA.Api.Areas.HelpPage
+namespace TestFullStack.YA.API.Areas.HelpPage
 {
     /// <summary>
     /// This class will create an object of a given type and populate it with sample data.

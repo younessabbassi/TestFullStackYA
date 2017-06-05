@@ -1,6 +1,6 @@
 using System;
 
-namespace TestFullStack.YA.Api.Areas.HelpPage.ModelDescriptions
+namespace TestFullStack.YA.API.Areas.HelpPage.ModelDescriptions
 {
     public class ParameterAnnotation
     {

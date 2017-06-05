@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace TestFullStack.YA.Api
+namespace TestFullStack.YA.API
 {
     public static class WebApiConfig
     {

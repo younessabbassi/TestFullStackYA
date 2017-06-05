@@ -8,9 +8,10 @@ namespace TestFullStack.YA.Data
 {
     public class UsersAccess
     {
-        private static  TestFullStackDBEntities DB = new TestFullStackDBEntities();
+      //  private static  DataBaseEntities DB = new DataBaseEntities();
         public static bool insert(Utilisateur user)
         {
+            DataBaseEntities DB = new DataBaseEntities();
             DB.Utilisateur.Add(user);
             DB.SaveChanges();
             return true;
@@ -22,7 +23,8 @@ namespace TestFullStack.YA.Data
         /// <param name="id"></param>
         /// <returns></returns>
         public static Utilisateur get(int id)
-        { 
+        {
+            DataBaseEntities DB = new DataBaseEntities();
             return DB.Utilisateur.Where(a => a.id == id).First();
         }
 
@@ -33,6 +35,7 @@ namespace TestFullStack.YA.Data
         /// <returns></returns>
         public static Utilisateur get(string login)
         {
+            DataBaseEntities DB = new DataBaseEntities();
             return DB.Utilisateur.Where(a => a.login == login).First();
         }
 
@@ -43,7 +46,9 @@ namespace TestFullStack.YA.Data
         /// <param name="password"></param>
         /// <returns></returns>
         public static Utilisateur get(string login, string password)
-        { 
+        {
+            DataBaseEntities DB = new DataBaseEntities();
+            bool ok = false;
             return DB.Utilisateur.Where(a => a.login == login && a.password == password).First();
         }
 

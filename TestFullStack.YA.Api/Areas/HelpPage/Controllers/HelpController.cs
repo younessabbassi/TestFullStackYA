@@ -1,10 +1,10 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using TestFullStack.YA.Api.Areas.HelpPage.ModelDescriptions;
-using TestFullStack.YA.Api.Areas.HelpPage.Models;
+using TestFullStack.YA.API.Areas.HelpPage.ModelDescriptions;
+using TestFullStack.YA.API.Areas.HelpPage.Models;
 
-namespace TestFullStack.YA.Api.Areas.HelpPage.Controllers
+namespace TestFullStack.YA.API.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.

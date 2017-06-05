@@ -44,7 +44,8 @@ namespace TestFullStack.YA.MiddleApi
         {
             if (user!=null && UsersAccess.get(user.login) == null)
             {
-                 UsersAccess.insert(user);
+                user.password = Utils.CreateMD5(user.password);
+                UsersAccess.insert(user);
                 return true;
             }
             return false;

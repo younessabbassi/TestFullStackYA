@@ -1,7 +1,7 @@
 using System;
 using System.Reflection;
 
-namespace TestFullStack.YA.Api.Areas.HelpPage.ModelDescriptions
+namespace TestFullStack.YA.API.Areas.HelpPage.ModelDescriptions
 {
     public interface IModelDocumentationProvider
     {

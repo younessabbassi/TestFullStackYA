@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
-namespace TestFullStack.YA.Api
+namespace TestFullStack.YA.API
 {
     public class WebApiApplication : System.Web.HttpApplication
     {

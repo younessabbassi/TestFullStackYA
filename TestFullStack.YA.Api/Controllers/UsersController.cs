@@ -9,30 +9,24 @@ using TestFullStack.YA.Data;
 namespace TestFullStack.YA.Api.Controllers
 {
     public class UsersController : ApiController
-    {
-        // GET: api/Users
-        public IEnumerable<string> Get()
-        { 
-            return new string[] { "value1", "value2" };
-        }
-
-       
+    { 
         /// <summary>
         /// get User By ID
         /// </summary>
         /// <param name=""></param>
         /// <returns></returns>
-        public Utilisateur Get(int id)
+        public Utilisateur GetUserById(int id)
         {
             return UsersAccess.get(id);
         }
 
-        public Utilisateur get(string login,string password) {
-            user
+        public Utilisateur GetUserByLoginPass(string login,string password) {
+            return UsersMiddle.get(login, password);
         }
         // POST: api/Users
-        public void Post([FromBody]string value)
+        public void Post(Utilisateur user)
         {
+            UsersMiddle.Add(user);
         }
 
         // PUT: api/Users/5

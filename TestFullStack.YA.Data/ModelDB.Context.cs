@@ -13,10 +13,10 @@ namespace TestFullStack.YA.Data
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TestFullStackDBEntities : DbContext
+    public partial class DataBaseEntities : DbContext
     {
-        public TestFullStackDBEntities()
-            : base("name=TestFullStackDBEntities")
+        public DataBaseEntities()
+            : base("name=DataBaseEntities")
         {
         }
     

@@ -11,10 +11,10 @@ using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
-using TestFullStack.YA.Api.Areas.HelpPage.ModelDescriptions;
-using TestFullStack.YA.Api.Areas.HelpPage.Models;
+using TestFullStack.YA.API.Areas.HelpPage.ModelDescriptions;
+using TestFullStack.YA.API.Areas.HelpPage.Models;
 
-namespace TestFullStack.YA.Api.Areas.HelpPage
+namespace TestFullStack.YA.API.Areas.HelpPage
 {
     public static class HelpPageConfigurationExtensions
     {

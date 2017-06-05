@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace TestFullStack.YA.Api
+namespace TestFullStack.YA.API
 {
     public class RouteConfig
     {
@@ -18,6 +18,12 @@ namespace TestFullStack.YA.Api
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+               name: "Users",
+               url: "{controller}/{action}/{id}",
+               defaults: new { controller = "Users", action = "Index", id = UrlParameter.Optional }
+           );
         }
     }
 }

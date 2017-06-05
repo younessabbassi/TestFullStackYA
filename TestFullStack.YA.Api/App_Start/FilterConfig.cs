@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace TestFullStack.YA.Api
+namespace TestFullStack.YA.API
 {
     public class FilterConfig
     {

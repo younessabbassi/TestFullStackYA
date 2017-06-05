@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TestFullStack.YA.API")]
+[assembly: AssemblyTitle("TestFullStack.YA.API.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TestFullStack.YA.API")]
+[assembly: AssemblyProduct("TestFullStack.YA.API.Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("795a73ee-4e9b-43e8-a825-32e28614fc7d")]
+[assembly: Guid("cb67a056-a6e0-47f0-ab5c-418f6a4940cc")]
 
 // Version information for an assembly consists of the following four values:
 //
