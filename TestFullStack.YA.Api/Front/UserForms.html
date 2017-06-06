@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <script src="/Scripts/jquery-1.10.2.js"></script>
+        <script src="/Scripts/jquery.validate.js"></script>
+        <script src="/Scripts/actions/userScripts.js"></script>
+        <link rel="stylesheet" type="text/css" href="../Content/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../Content/style.css">
+    </head>
+<body>
+    <form name="formSubscribtion" id="formSubscribtion">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>Inscription</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8"> 
+                    <div class="form-group">
+                        <label>
+                            Nom
+                        </label>
+                        <input type="text" placeholder="nom" class="form-control" id="name" name="name" />
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            Email
+                        </label>
+                        <input required type="email" placeholder="e-mail" class="form-control" id="username" name="username" />
+                    </div>
+                    <div>
+                        <label>
+                            Login
+                        </label>
+                        <input required type="text" placeholder="login" class="form-control" id="login" name="login" />
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            Mot de passe
+                        </label>
+                        <input required type="password" placeholder="password" class="form-control" id="password" name="password" />
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            Confirmer mot de passe
+                        </label>
+                        <input required type="password" placeholder="confirm-password" class="form-control" id="confirm_password" name="confirm_password" />
+                    </div>
+                    <button type="button" class="btn btn-lg btn-primary" id="btnSubscribe">
+                        S'inscrire
+                    </button>
+
+                </div>
+            </div> 
+        </div>
+    </form>
+</body>
+</html>
