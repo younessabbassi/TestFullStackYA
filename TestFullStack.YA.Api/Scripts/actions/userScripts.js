@@ -1,7 +1,7 @@
 ﻿ 
-$().ready(function () {
+$(document).ready(function () {
 
-    var urlApi = "api/users/"; 
+    var urlApi = "/api/users/"; 
     $("#formSubscribtion").validate({
         rules: {
             name: "required", 
@@ -42,11 +42,28 @@ $().ready(function () {
     });
 
     $("#btnSubscribe").click(function () {
-        $.getJSON(urlApi+"1")
-         .done(function (data) { 
-             alert(data);
-         }); 
-        $("#formSubscribtion").submit(); 
+
+        var form=$("#formSubscribtion");
+        if ($(form.checkValidity)) {
+            var nom = $("#name").val();
+            var email = $("#email").val();
+            var login = $("#login").val();
+            var password = $("#password").val();
+            $.ajax({
+                url: urlApi,
+                type: "GET",
+                dataType: "JSON",
+                data: { nom: nom, mail: email, login: login, pass: password },
+                success: function (result) {
+                    alert(result);
+                }
+            });
+            
+        } else {
+           form.find(':submit').click();
+        }
+         
+       // $("#formSubscribtion").submit(); 
     });
 
     

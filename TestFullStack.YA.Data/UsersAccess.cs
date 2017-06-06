@@ -22,10 +22,10 @@ namespace TestFullStack.YA.Data
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public static Utilisateur get(int id)
+        public static IQueryable<Utilisateur> get(int id)
         {
             DataBaseEntities DB = new DataBaseEntities();
-            return DB.Utilisateur.Where(a => a.id == id).First();
+            return DB.Utilisateur.Where(a => a.id == id);
         }
 
         /// <summary>
@@ -33,10 +33,10 @@ namespace TestFullStack.YA.Data
         /// </summary>
         /// <param name="login"></param>
         /// <returns></returns>
-        public static Utilisateur get(string login)
+        public static IQueryable<Utilisateur> get(string login)
         {
             DataBaseEntities DB = new DataBaseEntities();
-            return DB.Utilisateur.Where(a => a.login == login).First();
+            return DB.Utilisateur.Where(a => a.login == login);
         }
 
         /// <summary>
@@ -45,11 +45,11 @@ namespace TestFullStack.YA.Data
         /// <param name="login"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        public static Utilisateur get(string login, string password)
+        public static IQueryable<Utilisateur> get(string login, string password)
         {
             DataBaseEntities DB = new DataBaseEntities();
             bool ok = false;
-            return DB.Utilisateur.Where(a => a.login == login && a.password == password).First();
+            return DB.Utilisateur.Where(a => a.login == login && a.password == password);
         }
 
         

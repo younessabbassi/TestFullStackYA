@@ -17,7 +17,9 @@ namespace TestFullStack.YA.MiddleApi
         /// <returns></returns>
         public static Utilisateur get(int id)
         {
-            return UsersAccess.get(id);
+
+            IQueryable<Utilisateur> Result = UsersAccess.get(id);
+            return  Result.Any() ? Result.First() : null;
         }
         /// <summary>
         /// get user by Login and password
@@ -29,7 +31,8 @@ namespace TestFullStack.YA.MiddleApi
         {
             if (login != null)
             {
-                return UsersAccess.get(login);
+                IQueryable<Utilisateur> Result = UsersAccess.get(login);
+                return Result.Any() ? Result.First() : null;
             }
             return null;
         }
@@ -44,7 +47,8 @@ namespace TestFullStack.YA.MiddleApi
         {
             if (login!=null && password!=null)
             {
-                return UsersAccess.get(login,Utils.CreateMD5(password));
+                IQueryable<Utilisateur> Result = UsersAccess.get(login, Utils.CreateMD5(password));
+                return Result.Any() ? Result.First() : null; 
             }
             return null;
         }

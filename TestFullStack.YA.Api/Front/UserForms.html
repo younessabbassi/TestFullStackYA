@@ -11,12 +11,12 @@
     <form name="formSubscribtion" id="formSubscribtion">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-4">
                     <h2>Inscription</h2>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-8"> 
+                <div class="col-md-4"> 
                     <div class="form-group">
                         <label>
                             Nom
@@ -27,7 +27,7 @@
                         <label>
                             Email
                         </label>
-                        <input required type="email" placeholder="e-mail" class="form-control" id="username" name="username" />
+                        <input required type="email" placeholder="e-mail" class="form-control" id="email" name="email" />
                     </div>
                     <div>
                         <label>
@@ -43,17 +43,44 @@
                     </div>
                     <div class="form-group">
                         <label>
-                            Confirmer mot de passe
+                            Confirmer le mot de passe
                         </label>
                         <input required type="password" placeholder="confirm-password" class="form-control" id="confirm_password" name="confirm_password" />
                     </div>
-                    <button type="button" class="btn btn-lg btn-primary" id="btnSubscribe">
-                        S'inscrire
-                    </button>
-
+                    <input  type="button" class="btn btn-lg btn-primary" id="btnSubscribe" value="S'inscrire" /> 
+                    <input type="submit" style="visibility:hidden" />
                 </div>
             </div> 
         </div>
     </form>
+
+    <form name="formConnexion" id="formConnexion">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Inscription</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"> 
+                    <div>
+                        <label>
+                            Login
+                        </label>
+                        <input required type="text" placeholder="login" class="form-control" id="loginCnx" name="loginCnx" />
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            Mot de passe
+                        </label>
+                        <input required type="passwordCnx" placeholder="password" class="form-control" id="passwordCnx" name="passwordCnx" />
+                    </div> 
+                    <input type="button" class="btn btn-lg btn-primary" id="btnLogin" value="S'inscrire" />
+                    <input type="submit" style="visibility:hidden" />
+                </div>
+            </div>
+        </div>
+    </form>
+
 </body>
 </html>

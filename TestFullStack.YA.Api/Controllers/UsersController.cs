@@ -15,22 +15,39 @@ namespace TestFullStack.YA.Api.Controllers
         /// get User By ID
         /// </summary>
         /// <param name=""></param>
-        /// <returns></returns>
-        
-        public JsonResult<Utilisateur> GetUserById(int id)
+        /// <returns></returns> 
+        public IHttpActionResult GetUserById(int id)
         {
-            return Json(UsersAccess.get(id));
+            return Json(UsersMiddle.get(id));
         }
-         
-        public  JsonResult<Utilisateur> GetUserByLoginPass(string login,string password) {
+         /// <summary>
+         /// Action permettant de verifier la validité des credentieles 
+         /// </summary>
+         /// <param name="login"></param>
+         /// <param name="password"></param>
+         /// <returns></returns>
+        public IHttpActionResult GetUserByLoginPass(string login,string password) {
             if (login != null && password != null)
             {
-
+                if (UsersMiddle.get(login, password)!=null)
+                {
+                    return Json(UsersMiddle.get(login, password)); 
+                }
+               
             }
-            return Json(UsersMiddle.get(login, password));
+            return Json(new StringContent("{Not Found}")) ;
         }
 
-        public JsonResult<bool> AddUser(string name, string mail, string login, string pass)
+        /// <summary>
+        /// Action permettant d'ajouter un nouveau Utilisateur
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="mail"></param>
+        /// <param name="login"></param>
+        /// <param name="pass"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public IHttpActionResult AddUser(string name, string mail, string login, string pass)
         {
             if (name !=null && mail !=null && login != null && pass!=null)
             {
@@ -45,12 +62,13 @@ namespace TestFullStack.YA.Api.Controllers
                     {
                         Name = name,
                         email = mail,
+                        login=login,
                         password = pass
-                    });
+                    }); 
+                    return Json(true);
                 } 
             }
-            return Json(true);
-
+            return Json(false); 
         }
 
         // POST: api/Users 
@@ -58,15 +76,6 @@ namespace TestFullStack.YA.Api.Controllers
         {
             UsersMiddle.Add(user);
         }
-
-        // PUT: api/Users/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE: api/Users/5
-        public void Delete(int id)
-        {
-        }
+         
     }
 }
