@@ -1,6 +1,7 @@
 ﻿ 
 $().ready(function () {
 
+    var urlApi = "api/users/"; 
     $("#formSubscribtion").validate({
         rules: {
             name: "required", 
@@ -40,8 +41,13 @@ $().ready(function () {
         }
     });
 
-    $("#btnSubscribe").click(function () { 
+    $("#btnSubscribe").click(function () {
+        $.getJSON(urlApi+"1")
+         .done(function (data) { 
+             alert(data);
+         }); 
         $("#formSubscribtion").submit(); 
-    }); 
+    });
+
     
 });

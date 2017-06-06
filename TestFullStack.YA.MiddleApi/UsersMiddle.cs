@@ -19,6 +19,20 @@ namespace TestFullStack.YA.MiddleApi
         {
             return UsersAccess.get(id);
         }
+        /// <summary>
+        /// get user by Login and password
+        /// </summary>
+        /// <param name="login"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        public static Utilisateur get(string login)
+        {
+            if (login != null)
+            {
+                return UsersAccess.get(login);
+            }
+            return null;
+        }
 
         /// <summary>
         /// get user by Login and password
