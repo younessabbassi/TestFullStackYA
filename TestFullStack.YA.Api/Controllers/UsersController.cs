@@ -26,16 +26,16 @@ namespace TestFullStack.YA.Api.Controllers
          /// <param name="login"></param>
          /// <param name="password"></param>
          /// <returns></returns>
-        public IHttpActionResult GetUserByLoginPass(string login,string password) {
+        public Utilisateur GetUserByLoginPass(string login,string password) {
             if (login != null && password != null)
             {
                 if (UsersMiddle.get(login, password)!=null)
                 {
-                    return Json(UsersMiddle.get(login, password)); 
+                    return UsersMiddle.get(login, password); 
                 }
                
             }
-            return Json(new StringContent("{Not Found}")) ;
+             return null ;
         }
 
         /// <summary>

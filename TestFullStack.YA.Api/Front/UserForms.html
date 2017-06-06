@@ -3,13 +3,19 @@
     <head>
         <script src="/Scripts/jquery-1.10.2.js"></script>
         <script src="/Scripts/jquery.validate.js"></script>
+        <script src="/Scripts/actions/utils.js"></script>
         <script src="/Scripts/actions/userScripts.js"></script>
         <link rel="stylesheet" type="text/css" href="../Content/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../Content/style.css">
     </head>
 <body>
+    <div id="loggedIn">
+        <span id="spNameLogged" class="name-logged"></span>
+        <hr/>
+    </div>
+
     <form name="formSubscribtion" id="formSubscribtion">
-        <div class="container-fluid">
+        <div class="container-fluid boxed">
             <div class="row">
                 <div class="col-md-4">
                     <h2>Inscription</h2>
@@ -49,20 +55,20 @@
                     </div>
                     <input  type="button" class="btn btn-lg btn-primary" id="btnSubscribe" value="S'inscrire" /> 
                     <input type="submit" style="visibility:hidden" />
+                    <span id="MsgSubscribe"></span>
                 </div>
             </div> 
         </div>
-    </form>
-
+    </form> 
     <form name="formConnexion" id="formConnexion">
-        <div class="container-fluid">
+        <div class="container-fluid boxed"> 
             <div class="row">
                 <div class="col-md-4">
-                    <h2>Inscription</h2>
+                    <h2>Connexion</h2>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4"> 
+                <div class="col-md-4">
                     <div>
                         <label>
                             Login
@@ -73,14 +79,17 @@
                         <label>
                             Mot de passe
                         </label>
-                        <input required type="passwordCnx" placeholder="password" class="form-control" id="passwordCnx" name="passwordCnx" />
-                    </div> 
-                    <input type="button" class="btn btn-lg btn-primary" id="btnLogin" value="S'inscrire" />
+                        <input required type="password" placeholder="password" class="form-control" id="passwordCnx" name="passwordCnx" />
+                    </div>
+                    <input type="button" class="btn btn-lg btn-primary" id="btnLogin" value="login" />
                     <input type="submit" style="visibility:hidden" />
+                    <span id="MsgLogin"></span>
                 </div>
             </div>
         </div>
     </form>
+  
+  
 
 </body>
 </html>
