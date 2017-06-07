@@ -11,6 +11,7 @@
 <body>
     <div id="loggedIn">
         <span id="spNameLogged" class="name-logged"></span>
+        <input type="button" class="btn btn-primary mb1 bg-red float-right" id="btnDeconnexion" value="Déconnecter" />
         <hr/>
     </div>
 
@@ -53,7 +54,8 @@
                         </label>
                         <input required type="password" placeholder="confirm-password" class="form-control" id="confirm_password" name="confirm_password" />
                     </div>
-                    <input  type="button" class="btn btn-lg btn-primary" id="btnSubscribe" value="S'inscrire" /> 
+                    <input  type="button" class="btn btn-lg btn-primary" id="btnSubscribe" value="S'inscrire" />  
+                    <a id="btnConnexion" class="navigate-link">Connexion</a>
                     <input type="submit" style="visibility:hidden" />
                     <span id="MsgSubscribe"></span>
                 </div>
@@ -81,7 +83,8 @@
                         </label>
                         <input required type="password" placeholder="password" class="form-control" id="passwordCnx" name="passwordCnx" />
                     </div>
-                    <input type="button" class="btn btn-lg btn-primary" id="btnLogin" value="login" />
+                    <input type="button" class="btn btn-primary" id="btnLogin" value="login" />
+                    <a id="btnInsription"  class="navigate-link">Inscription</a>
                     <input type="submit" style="visibility:hidden" />
                     <span id="MsgLogin"></span>
                 </div>

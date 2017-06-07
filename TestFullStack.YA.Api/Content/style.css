@@ -6,3 +6,11 @@
 .name-logged{
     font-size : 16px;
 }
+
+.float-right{
+  float : right;
+}
+
+.navigate-link {
+    cursor : pointer;
+}

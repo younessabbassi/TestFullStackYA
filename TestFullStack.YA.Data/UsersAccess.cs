@@ -8,7 +8,7 @@ namespace TestFullStack.YA.Data
 {
     public class UsersAccess
     {
-      //  private static  DataBaseEntities DB = new DataBaseEntities();
+      
         public static bool insert(Utilisateur user)
         {
             DataBaseEntities DB = new DataBaseEntities();

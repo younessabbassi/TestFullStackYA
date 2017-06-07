@@ -45,8 +45,8 @@ namespace TestFullStack.YA.Api.Controllers
         /// <param name="mail"></param>
         /// <param name="login"></param>
         /// <param name="pass"></param>
-        /// <returns></returns>
-        [HttpGet]
+        /// <returns></returns> 
+        [AcceptVerbs("GET", "POST")]
         public IHttpActionResult AddUser(string name, string mail, string login, string pass)
         {
             if (name !=null && mail !=null && login != null && pass!=null)
@@ -71,10 +71,21 @@ namespace TestFullStack.YA.Api.Controllers
             return Json(false); 
         }
 
-        // POST: api/Users 
-        public void Post(Utilisateur user)
+        /// <summary>
+        /// Permet de créer un nouveau utilisateur 
+        /// </summary>
+        /// <param name="user">type Utilisateur</param>
+        /// <returns></returns>
+        public IHttpActionResult Post(Utilisateur user)
         {
-            UsersMiddle.Add(user);
+            if (user.Name != null && user.email != null && user.login != null && user.password != null)
+            {
+                if (UsersMiddle.get(user.login) == null)
+                {
+                    return Json(UsersMiddle.Add(user)); 
+                }
+            }  
+            return Json(false);
         }
          
     }

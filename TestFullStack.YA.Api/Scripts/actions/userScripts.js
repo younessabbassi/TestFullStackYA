@@ -1,16 +1,37 @@
 ﻿ 
-$(document).ready(function () { 
-    if (readCookie("login")!= null) {
-        alert("Connected");
+$(document).ready(function () {
+    var urlApi = "/api/users/";
+
+    if (readCookie("LoggedName") != null) { 
+        $("#loggedIn").show();
+        $("#spNameLogged").html("Salut : " + readCookie("LoggedName"));
         $("#formConnexion").hide();
-        $("#formSubscribtion").show();
+        $("#formSubscribtion").hide();
     } else {
-       // createCookie("koko", "testing", 1);
         $("#formConnexion").show();
-        $("#formSubscribtion").hide(); 
+        $("#formSubscribtion").hide();
+        $("#loggedIn").hide();
     }
 
-    var urlApi = "/api/users/"; 
+    $("#btnConnexion").click(function () {
+        $("#formConnexion").show();
+        $("#formSubscribtion").hide();
+    });
+
+    $("#btnInsription").click(function () {
+        $("#formConnexion").hide();
+        $("#formSubscribtion").show();
+    });
+
+    $("#btnDeconnexion").click(function () { 
+        eraseCookie("LoggedName");
+        $("#loginCnx").val("");
+        $("#passwordCnx").val("");
+        $("#formConnexion").show();
+        $("#formSubscribtion").hide();
+        $("#loggedIn").hide();
+    });
+     
     $("#formSubscribtion").validate({
         rules: {
             name: "required", 
@@ -79,11 +100,11 @@ $(document).ready(function () {
             var password = $("#password").val();
             $.ajax({
                 url: urlApi,
-                type: "GET",
+                type: "POST",
                 dataType: "JSON",
-                data: { nom: nom, mail: email, login: login, pass: password },
+                data: { Name: nom, email: email, login: login, password: password },
                 success: function (result) {
-                    alert(result);
+                    alert(JSON.stringify(result)=="true");
                 }
             }); 
         } else {
@@ -109,6 +130,8 @@ $(document).ready(function () {
                         createCookie("LoggedName", result.Name, 1);
                         $("#loggedIn").show();
                         $("#spNameLogged").html("Salut : " + result.Name);
+                        $("#formConnexion").hide();
+                        $("#formSubscribtion").hide(); 
                     }
                     else
                     {

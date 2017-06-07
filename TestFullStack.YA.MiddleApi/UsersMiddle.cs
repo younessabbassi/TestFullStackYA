@@ -16,13 +16,12 @@ namespace TestFullStack.YA.MiddleApi
         /// <param name="id"></param>
         /// <returns></returns>
         public static Utilisateur get(int id)
-        {
-
+        { 
             IQueryable<Utilisateur> Result = UsersAccess.get(id);
             return  Result.Any() ? Result.First() : null;
         }
         /// <summary>
-        /// get user by Login and password
+        /// get user by Login
         /// </summary>
         /// <param name="login"></param>
         /// <param name="password"></param>
@@ -60,7 +59,7 @@ namespace TestFullStack.YA.MiddleApi
         /// <returns></returns>
         public static bool Add(Utilisateur user)
         {
-            if (user!=null && UsersAccess.get(user.login) == null)
+            if (user!=null && !UsersAccess.get(user.login).Any())
             {
                 user.password = Utils.CreateMD5(user.password);
                 UsersAccess.insert(user);
