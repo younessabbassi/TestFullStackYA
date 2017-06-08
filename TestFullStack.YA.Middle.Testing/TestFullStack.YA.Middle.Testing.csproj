@@ -59,7 +59,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UserMIddle_Get.cs" />
+    <Compile Include="TestScenarios\UserMiddle_Add.cs" />
+    <Compile Include="TestScenarios\UserMIddle_Get.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

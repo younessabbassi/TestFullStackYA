@@ -89,10 +89,10 @@ $(document).ready(function () {
                         $("#login").val("");
                         $("#password").val("");
                         $("#confirm_password").val("");
-                        $("#MsgSubscribe").val("Inscription réussite");
+                        $("#MsgSubscribe").html("Inscription réussite");
                         $("#MsgSubscribe").css("color","green");
                     } else {
-                        ("#MsgSubscribe").val("Veuillez changer le login !! ");
+                        ("#MsgSubscribe").html("Veuillez changer le login !! ");
                         $("#MsgSubscribe").css("color", "red");
                     }
                    

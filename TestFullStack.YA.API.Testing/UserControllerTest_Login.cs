@@ -19,15 +19,17 @@ namespace TestFullStack.YA.API.Testing
         public void GetTestToLoginSuccess()
         {
             string urlApp= "http://localhost:51468/Front/UserForms.html";
-            var driver = new ChromeDriver(); 
-            driver.Navigate().GoToUrl(urlApp); 
-            var txtLogin = driver.FindElement(By.Id("loginCnx"));
+            var chromedriver = new ChromeDriver();
+            chromedriver.Navigate().GoToUrl(urlApp); 
+            var txtLogin = chromedriver.FindElement(By.Id("loginCnx"));
             txtLogin.SendKeys("koko"); 
-            var pwBox = driver.FindElement(By.Id("passwordCnx"));
+            var pwBox = chromedriver.FindElement(By.Id("passwordCnx"));
             pwBox.SendKeys("koko"); 
-            var btnlogin = driver.FindElement(By.Id("btnLogin"));
+            var btnlogin = chromedriver.FindElement(By.Id("btnLogin"));
             btnlogin.Click();
-            driver.Quit(); 
+            var spMessage = chromedriver.FindElement(By.Id("spNameLogged"));
+            Assert.AreNotEqual(spMessage.Text,"");
+            chromedriver.Quit(); 
         }
 
         /// <summary>
@@ -37,15 +39,17 @@ namespace TestFullStack.YA.API.Testing
         public void GetTestToLogiFail()
         {
             string urlApp = "http://localhost:51468/Front/UserForms.html";
-            var driver = new ChromeDriver();
-            driver.Navigate().GoToUrl(urlApp);
-            var txtLogin = driver.FindElement(By.Id("loginCnx"));
+            var chromedriver = new ChromeDriver();
+            chromedriver.Navigate().GoToUrl(urlApp);
+            var txtLogin = chromedriver.FindElement(By.Id("loginCnx"));
             txtLogin.SendKeys("koko");
-            var pwBox = driver.FindElement(By.Id("passwordCnx"));
+            var pwBox = chromedriver.FindElement(By.Id("passwordCnx"));
             pwBox.SendKeys("badpassword");
-            var btnlogin = driver.FindElement(By.Id("btnLogin"));
+            var btnlogin = chromedriver.FindElement(By.Id("btnLogin"));
             btnlogin.Click();
-            driver.Quit();
+            var spMessage = chromedriver.FindElement(By.Id("spNameLogged"));
+            Assert.AreEqual(spMessage.Text, "");
+            chromedriver.Quit();
         }
     }
 }
