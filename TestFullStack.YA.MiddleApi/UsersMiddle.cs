@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using TestFullStack.YA.Core;
 using TestFullStack.YA.Data;
 
-namespace TestFullStack.YA.MiddleApi
+namespace TestFullStack.YA.Middle
 {
     public class UsersMiddle
     {

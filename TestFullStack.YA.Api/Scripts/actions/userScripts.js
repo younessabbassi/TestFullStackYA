@@ -70,30 +70,9 @@ $(document).ready(function () {
         }
     });
 
-    $("#formConnexion").validate({
-        rules: {
-            name: "required",
-            login: {
-                required: true
-            },
-            password: {
-                required: true
-            }
-        },
-        messages: {
-            name: "le nom est obligatoire !!",
-            login: {
-                required: "le login est obligatoire" 
-            },
-            password: {
-                required: "Obligatoire !!"
-            }
-        }
-    });
-
-    $("#btnSubscribe").click(function () { 
+     $("#btnSubscribe").click(function () { 
         var form=$("#formSubscribtion");
-        if ($(form.checkValidity)) {
+        if (form.valid()) {
             var nom = $("#name").val();
             var email = $("#email").val();
             var login = $("#login").val();
@@ -104,7 +83,19 @@ $(document).ready(function () {
                 dataType: "JSON",
                 data: { Name: nom, email: email, login: login, password: password },
                 success: function (result) {
-                    alert(JSON.stringify(result)=="true");
+                    if (JSON.stringify(result)=="true") {
+                        $("#name").val("");
+                        $("#email").val("");
+                        $("#login").val("");
+                        $("#password").val("");
+                        $("#confirm_password").val("");
+                        $("#MsgSubscribe").val("Inscription réussite");
+                        $("#MsgSubscribe").css("color","green");
+                    } else {
+                        ("#MsgSubscribe").val("Veuillez changer le login !! ");
+                        $("#MsgSubscribe").css("color", "red");
+                    }
+                   
                 }
             }); 
         } else {
@@ -114,7 +105,8 @@ $(document).ready(function () {
 
     $("#btnLogin").click(function () {
         var form = $("#formConnexion");
-        if ($(form.checkValidity))
+        
+        if (form.valid())
         {
             var login = $("#loginCnx").val();
             var pass = $("#passwordCnx").val();
@@ -131,12 +123,15 @@ $(document).ready(function () {
                         $("#loggedIn").show();
                         $("#spNameLogged").html("Salut : " + result.Name);
                         $("#formConnexion").hide();
-                        $("#formSubscribtion").hide(); 
+                        $("#formSubscribtion").hide();
+                        $("#loginCnx").val("");
+                        $("#passwordCnx").val("");
                     }
                     else
                     {
                         $("#MsgLogin").html("invalide Login/password");
-                        $("#MsgLogin").addClass("error");
+                        $("#MsgLogin").addClass("error"); 
+                         $("#passwordCnx").val("");
                     }
                 }
             });
@@ -147,8 +142,7 @@ $(document).ready(function () {
             form.find(':submit').click();
         }
     });
-
-    
+         
 
     
 });

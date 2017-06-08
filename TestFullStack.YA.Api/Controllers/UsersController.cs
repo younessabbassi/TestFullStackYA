@@ -5,8 +5,10 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Results;
-using TestFullStack.YA.MiddleApi;
+using TestFullStack.YA.Middle;
 using TestFullStack.YA.Data;
+using TestFullStack.YA.Core;
+
 namespace TestFullStack.YA.Api.Controllers
 {
     public class UsersController : ApiController
@@ -17,7 +19,7 @@ namespace TestFullStack.YA.Api.Controllers
         /// <param name=""></param>
         /// <returns></returns> 
         public IHttpActionResult GetUserById(int id)
-        {
+        { 
             return Json(UsersMiddle.get(id));
         }
          /// <summary>
@@ -36,6 +38,24 @@ namespace TestFullStack.YA.Api.Controllers
                
             }
              return null ;
+        }
+
+        /// <summary>
+        /// Action permettant de retrouver un utilisateur par son Login
+        /// </summary>
+        /// <param name="login"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        public Utilisateur GetUserByLogin(string login)
+        {
+            if (login != null )
+            {
+                if (UsersMiddle.get(login) != null)
+                {
+                    return UsersMiddle.get(login);
+                }
+            }
+            return null;
         }
 
         /// <summary>

@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Web.Http;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TestFullStack.YA.API;
 using TestFullStack.YA.API.Controllers;
 
@@ -16,8 +16,8 @@ namespace TestFullStack.YA.API.Tests.Controllers
         [TestMethod]
         public void Get()
         {
-            // Arrange
-            
+          /*  // Arrange
+            var controller=new UsersController
             // Act
             IEnumerable<string> result = controller.Get();
 
@@ -25,7 +25,7 @@ namespace TestFullStack.YA.API.Tests.Controllers
             Assert.IsNotNull(result);
             Assert.AreEqual(2, result.Count());
             Assert.AreEqual("value1", result.ElementAt(0));
-            Assert.AreEqual("value2", result.ElementAt(1));
+            Assert.AreEqual("value2", result.ElementAt(1));*/
         }
 
         /// <summary>

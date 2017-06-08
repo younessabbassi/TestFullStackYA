@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
+using System.Net.Mail;
 
 namespace TestFullStack.YA.Core
 {
@@ -29,6 +30,7 @@ namespace TestFullStack.YA.Core
                 }
                 return sb.ToString();
             }
-        }
+        } 
+
     }
 }
