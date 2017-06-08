@@ -6,9 +6,16 @@ using System.Threading.Tasks;
 
 namespace TestFullStack.YA.Data
 {
+    /// <summary>
+    /// Data layer class for traiting the User Table 
+    /// </summary>
     public class UsersAccess
     {
-      
+        /// <summary>
+        /// Add a user to the Table User
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         public static bool insert(Utilisateur user)
         {
             DataBaseEntities DB = new DataBaseEntities();

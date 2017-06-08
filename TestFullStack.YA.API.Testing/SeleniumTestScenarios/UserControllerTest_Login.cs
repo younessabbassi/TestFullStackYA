@@ -8,10 +8,12 @@ using OpenQA.Selenium.PhantomJS;
 using TestFullStack.YA.API.Controllers;
 namespace TestFullStack.YA.API.Testing
 {
+    /// <summary>
+    /// [Selenium test]: Class for testing Login Action scenarios
+    /// </summary>
     [TestClass]
     public class UserControllerTest_Login
-    {
-
+    { 
        /// <summary>
        /// test case for normal login action
        /// </summary>

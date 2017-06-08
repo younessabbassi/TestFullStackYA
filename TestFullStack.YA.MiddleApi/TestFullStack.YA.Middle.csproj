@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UsersMiddle.cs" />
+    <Compile Include="MidleBridges\UsersMiddle.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TestFullStack.YA.Core\TestFullStack.YA.Core.csproj">

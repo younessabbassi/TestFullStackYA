@@ -8,6 +8,9 @@ using TestFullStack.YA.Data;
 
 namespace TestFullStack.YA.Middle
 {
+    /// <summary>
+    /// Bridge class between Data and API : give the method to access the Data Methods for Traiting the table/objects [Utilisateur]
+    /// </summary>
     public class UsersMiddle
     {
         /// <summary>
