@@ -82,7 +82,7 @@ $(document).ready(function () {
                 type: "POST",
                 dataType: "JSON",
                 data: { Name: nom, email: email, login: login, password: password },
-                success: function (result) {
+                success: function (result) { 
                     if (JSON.stringify(result)=="true") {
                         $("#name").val("");
                         $("#email").val("");
